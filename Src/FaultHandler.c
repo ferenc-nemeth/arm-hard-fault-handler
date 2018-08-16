@@ -42,7 +42,7 @@ void HardFault_Handler(void)
 
 /**
  * @brief   Prints the registers and gives detailed information about the error(s).
- * @param   *hard_fault_values: Stack frame registers (R0-R3, R12, LR, LC, PSR).
+ * @param   *stack_frame: Stack frame registers (R0-R3, R12, LR, LC, PSR).
  * @param   exc: EXC_RETURN register.
  * @return  void
  */
