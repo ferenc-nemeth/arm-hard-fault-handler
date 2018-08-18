@@ -7,7 +7,7 @@
  *          -Try to write some data to a place where we shouldn't.
  *          -The system throws a Hard Fault.
  *
- *          Copyright (c) 2018 Ferenc Nemeth - https://github.com/iamferenc/
+ *          Copyright (c) 2018 Ferenc Nemeth - https://github.com/ferenc-nemeth
  */
 
 #include "stm32f10x.h"

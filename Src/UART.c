@@ -5,7 +5,7 @@
  * @brief   UART related functions. Initialization, char and string transmission
  *          and __write for printf().
  *
- *          Copyright (c) 2018 Ferenc Nemeth - https://github.com/iamferenc/
+ *          Copyright (c) 2018 Ferenc Nemeth - https://github.com/ferenc-nemeth
  */
 
 #include "UART.h"

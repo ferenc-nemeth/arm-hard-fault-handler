@@ -11,7 +11,7 @@
  *            and prints out a report regarding the fault.
  *          - Stop the execution with a breakpoint.
  *
- *          Copyright (c) 2018 Ferenc Nemeth - https://github.com/iamferenc/
+ *          Copyright (c) 2018 Ferenc Nemeth - https://github.com/ferenc-nemeth
  */
 
 #ifndef FAULTHANDLER_H_
