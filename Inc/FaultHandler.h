@@ -18,7 +18,7 @@
 #define FAULTHANDLER_H_
 
 #include "stm32f10x.h"
-#include "UART.h"
+#include "Communication.h"
 
 /* Bit masking. */
 #define CHECK_BIT(REG, POS) ((REG) & (1u << (POS)))

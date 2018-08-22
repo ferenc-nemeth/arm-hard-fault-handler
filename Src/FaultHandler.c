@@ -62,124 +62,124 @@ void ReportHardFault(uint32_t *stack_frame, uint32_t exc)
   uint32_t bfar = SCB->BFAR;
   uint32_t afsr = SCB->AFSR;
 
-  printf("\n\r!!!Hard Fault detected!!!\n\r");
+  printf("\n!!!Hard Fault detected!!!\n");
 
-  printf("\n\rStack frame:\n\r");
-  printf("R0 :        0x%08lX\n\r", r0);
-  printf("R1 :        0x%08lX\n\r", r1);
-  printf("R2 :        0x%08lX\n\r", r2);
-  printf("R3 :        0x%08lX\n\r", r3);
-  printf("R12:        0x%08lX\n\r", r12);
-  printf("LR :        0x%08lX\n\r", lr);
-  printf("PC :        0x%08lX\n\r", pc);
-  printf("PSR:        0x%08lX\n\r", psr);
+  printf("\nStack frame:\n");
+  printf("R0 :        0x%08lX\n", r0);
+  printf("R1 :        0x%08lX\n", r1);
+  printf("R2 :        0x%08lX\n", r2);
+  printf("R3 :        0x%08lX\n", r3);
+  printf("R12:        0x%08lX\n", r12);
+  printf("LR :        0x%08lX\n", lr);
+  printf("PC :        0x%08lX\n", pc);
+  printf("PSR:        0x%08lX\n", psr);
 
-  printf("\n\rFault status:\n\r");
-  printf("HFSR:       0x%08lX\n\r", hfsr);
-  printf("CFSR:       0x%08lX\n\r", cfsr);
-  printf("MMAR:       0x%08lX\n\r", mmar);
-  printf("BFAR:       0x%08lX\n\r", bfar);
-  printf("AFSR:       0x%08lX\n\r", afsr);
+  printf("\nFault status:\n");
+  printf("HFSR:       0x%08lX\n", hfsr);
+  printf("CFSR:       0x%08lX\n", cfsr);
+  printf("MMAR:       0x%08lX\n", mmar);
+  printf("BFAR:       0x%08lX\n", bfar);
+  printf("AFSR:       0x%08lX\n", afsr);
 
-  printf("\n\rOther:\n\r");
-  printf("EXC_RETURN: 0x%08lX\n\r", exc);
+  printf("\nOther:\n");
+  printf("EXC_RETURN: 0x%08lX\n", exc);
 
-  printf("\n\rDetails of the fault status:\n\r");
-  printf("Hard fault status:\n\r");
+  printf("\nDetails of the fault status:\n");
+  printf("Hard fault status:\n");
   if (CHECK_BIT(hfsr, FORCED))
   {
-    printf(" - Forced Hard fault.\n\r");
+    printf(" - Forced Hard fault.\n");
   }
   if (CHECK_BIT(hfsr, VECTTBL))
   {
-    printf(" - Bus fault on vector table read.\n\r");
+    printf(" - Bus fault on vector table read.\n");
   }
-  printf("MemManage fault status:\n\r");
+  printf("MemManage fault status:\n");
   if (CHECK_BIT(cfsr, MMARVALID))
   {
-    printf(" - MMAR holds a valid address.\n\r");
+    printf(" - MMAR holds a valid address.\n");
   }
   else
   {
-    printf(" - MMAR holds an invalid address.\n\r");
+    printf(" - MMAR holds an invalid address.\n");
   }
   if (CHECK_BIT(cfsr, MLSPERR))
   {
-    printf(" - Fault occurred during floating-point lazy state preservation.\n\r");
+    printf(" - Fault occurred during floating-point lazy state preservation.\n");
   }
   if (CHECK_BIT(cfsr, MSTKERR))
   {
-    printf(" - Stacking has caused an access violation.\n\r");
+    printf(" - Stacking has caused an access violation.\n");
   }
   if (CHECK_BIT(cfsr, MUNSTKERR))
   {
-    printf(" - Unstacking has caused an access violation.\n\r");
+    printf(" - Unstacking has caused an access violation.\n");
   }
   if (CHECK_BIT(cfsr, DACCVIOL))
   {
-    printf(" - Load or store at a location that does not permit the operation.\n\r");
+    printf(" - Load or store at a location that does not permit the operation.\n");
   }
   if (CHECK_BIT(cfsr, IACCVIOL))
   {
-    printf(" - Instruction fetch from a location that does not permit execution.\n\r");
+    printf(" - Instruction fetch from a location that does not permit execution.\n");
   }
-  printf("Bus fault status:\n\r");
+  printf("Bus fault status:\n");
   if (CHECK_BIT(cfsr, BFARVALID))
   {
-    printf(" - BFAR holds a valid address.\n\r");
+    printf(" - BFAR holds a valid address.\n");
   }
   else
   {
-    printf(" - BFAR holds an invalid address.\n\r");
+    printf(" - BFAR holds an invalid address.\n");
   }
   if (CHECK_BIT(cfsr, LSPERR))
   {
-    printf(" - Fault occurred during floating-point lazy state preservation.\n\r");
+    printf(" - Fault occurred during floating-point lazy state preservation.\n");
   }
   if (CHECK_BIT(cfsr, STKERR))
   {
-    printf(" - Stacking has caused a Bus fault.\n\r");
+    printf(" - Stacking has caused a Bus fault.\n");
   }
   if (CHECK_BIT(cfsr, UNSTKERR))
   {
-    printf(" - Unstacking has caused a Bus fault.\n\r");
+    printf(" - Unstacking has caused a Bus fault.\n");
   }
   if (CHECK_BIT(cfsr, IMPRECISERR))
   {
-    printf(" - Data bus error has occurred, but the return address in the stack is not related to the fault.\n\r");
+    printf(" - Data bus error has occurred, but the return address in the stack is not related to the fault.\n");
   }
   if (CHECK_BIT(cfsr, PRECISERR))
   {
-    printf(" - Data bus error has occurred, and the return address points to the instruction that caused the fault.\n\r");
+    printf(" - Data bus error has occurred, and the return address points to the instruction that caused the fault.\n");
   }
   if (CHECK_BIT(cfsr, IBUSERR))
   {
-    printf(" - Instruction bus error.\n\r");
+    printf(" - Instruction bus error.\n");
   }
-  printf("Usage fault status:\n\r");
+  printf("Usage fault status:\n");
   if (CHECK_BIT(cfsr, DIVBYZERO))
   {
-    printf(" - The processor has executed an SDIV or UDIV instruction with a divisor of 0.\n\r");
+    printf(" - The processor has executed an SDIV or UDIV instruction with a divisor of 0.\n");
   }
   if (CHECK_BIT(cfsr, UNALIGNED))
   {
-    printf(" - The processor has made an unaligned memory access.\n\r");
+    printf(" - The processor has made an unaligned memory access.\n");
   }
   if (CHECK_BIT(cfsr, NOCP))
   {
-    printf(" - Attempted to access a coprocessor.\n\r");
+    printf(" - Attempted to access a coprocessor.\n");
   }
   if (CHECK_BIT(cfsr, INVPC))
   {
-    printf(" - Illegal attempt to load of EXC_RETURN to the PC.\n\r");
+    printf(" - Illegal attempt to load of EXC_RETURN to the PC.\n");
   }
   if (CHECK_BIT(cfsr, INVSTATE))
   {
-    printf(" - Attempted to execute an instruction that makes illegal use of the EPSR.\n\r");
+    printf(" - Attempted to execute an instruction that makes illegal use of the EPSR.\n");
   }
   if (CHECK_BIT(cfsr, INVSTATE))
   {
-    printf(" - The processor has attempted to execute an undefined instruction.\n\r");
+    printf(" - The processor has attempted to execute an undefined instruction.\n");
   }
 
   /* Breakpoint. */
