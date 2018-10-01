@@ -35,7 +35,7 @@ The registers are:
 
 The exact description of these register are in the datasheet or on ARM's website. [[2]](#references)[[3]](#references) <br>
 Finally, the program ends with a breakpoint and with a while(1) loop.
-<br><img src="https://raw.githubusercontent.com/iamferenc/arm-hard-fault-handler/master/Design/FaultHandler.png" ><br>
+<br><img src="https://raw.githubusercontent.com/ferenc-nemeth/arm-hard-fault-handler/master/Design/FaultHandler.png" ><br>
 *Figure 1. The Activity diagram of the software.*
 
 ### About the demo
