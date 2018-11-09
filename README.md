@@ -1,7 +1,7 @@
 # arm-hard-fault-handler
 What to do when Hard fault hits? Debugger and error reporter solution for ARM Cortex M3 and M4.
 
-### Table of content
+### Table of Contents
 - [Introduction](#introduction)
 - [How it works](#how-it-works)
 - [About the demo](#about-the-demo)
