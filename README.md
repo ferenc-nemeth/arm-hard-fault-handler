@@ -1,7 +1,7 @@
 # arm-hard-fault-handler
 What to do when Hard fault hits? Debugger and error reporter solution for ARM Cortex M3 and M4.
 
-### Table of content
+### Table of Contents
 - [Introduction](#introduction)
 - [How it works](#how-it-works)
 - [About the demo](#about-the-demo)
@@ -35,7 +35,7 @@ The registers are:
 
 The exact description of these register are in the datasheet or on ARM's website. [[2]](#references)[[3]](#references) <br>
 Finally, the program ends with a breakpoint and with a while(1) loop.
-<br><img src="https://raw.githubusercontent.com/iamferenc/arm-hard-fault-handler/master/Design/FaultHandler.png" ><br>
+<br><img src="https://raw.githubusercontent.com/ferenc-nemeth/arm-hard-fault-handler/master/Design/FaultHandler.png" ><br>
 *Figure 1. The Activity diagram of the software.*
 
 ### About the demo
