@@ -1,5 +1,5 @@
 /**
- * @file    FaultHandler.c
+ * @file    FaultHandler.h
  * @author  Ferenc Nemeth
  * @date    12 Aug 2018
  * @brief   This is the fault handler, where the program gets, if there is a problem.
